@@ -1,0 +1,22 @@
+{
+    "tableName": "personDetails",
+    "tableType": "OFFLINE",
+    "segmentsConfig": {
+      "segmentPushType": "APPEND",
+      "segmentAssignmentStrategy": "BalanceNumSegmentAssignmentStrategy",
+      "schemaName": "personDetails",
+      "replication": "1"
+    },
+    "tenants": {
+    },
+    "tableIndexConfig": {
+      "loadMode": "HEAP",
+      "invertedIndexColumns": [
+        
+      ]
+    },
+    "metadata": {
+      "customConfigs": {
+      }
+    }
+  }

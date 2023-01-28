@@ -1,0 +1,25 @@
+{
+    "schemaName": "person",
+    "primaryKeyColumns": [
+      "id"
+    ],
+    "dimensionFieldSpecs": [
+      {
+        "name": "id",
+        "dataType": "INT"
+      },
+      {
+        "name": "name",
+        "dataType": "STRING"
+      }
+    ],
+    "metricFieldSpecs": [],
+    "dateTimeFieldSpecs": [
+      {
+        "name": "time_created",
+        "dataType": "STRING",
+        "format": "1:MILLISECONDS:SIMPLE_DATE_FORMAT:yyyy-MM-dd HH:mm:ss",
+        "granularity": "1:MILLISECONDS"
+      }
+    ]
+  }

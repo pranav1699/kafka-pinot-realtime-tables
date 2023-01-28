@@ -1,0 +1,19 @@
+{
+    "metricFieldSpecs": [
+      {
+        "dataType": "INT",
+        "name": "age"
+      }
+    ],
+    "dimensionFieldSpecs": [
+      {
+        "dataType": "STRING",
+        "name": "name"
+      },
+      {
+        "dataType": "STRING",
+        "name": "location"
+      }
+    ],
+    "schemaName": "personDetails"
+  }

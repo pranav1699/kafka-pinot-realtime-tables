@@ -1,0 +1,68 @@
+{
+    "tableName": "person",
+    "tableType": "REALTIME",
+    "tenants": {
+    },
+    "segmentsConfig": {
+      "schemaName": "person",
+      "timeColumnName": "payload.time_created",
+      "replication": "1",
+      "replicasPerPartition": "1",
+      "retentionTimeUnit": "DAYS",
+      "retentionTimeValue": "1",
+      "segmentPushType": "APPEND",
+      "segmentAssignmentStrategy": "BalanceNumSegmentAssignmentStrategy"
+    },
+    "tableIndexConfig": {
+      "loadMode": "MMAP",
+      "invertedIndexColumns": [],
+      "createInvertedIndexDuringSegmentGeneration": false,
+      "rangeIndexColumns": [],
+      "sortedColumn": [],
+      "bloomFilterColumns": [],
+      "bloomFilterConfigs": null,
+      "noDictionaryColumns": [],
+      "onHeapDictionaryColumns": [],
+      "varLengthDictionaryColumns": [],
+      "enableDefaultStarTree": false,
+      "starTreeIndexConfigs": null,
+      "enableDynamicStarTreeCreation": false,
+      "segmentPartitionConfig": null,
+      "columnMinMaxValueGeneratorMode": null,
+      "aggregateMetrics": false,
+      "nullHandlingEnabled": false,
+      "streamConfigs": {
+        "streamType": "kafka",
+        "stream.kafka.topic.name": "mysql.fakeshop.person",
+        "stream.kafka.broker.list": "kafka:9092",
+        "stream.kafka.consumer.type": "lowlevel",
+        "stream.kafka.consumer.prop.auto.offset.reset": "smallest",
+        "stream.kafka.consumer.factory.class.name": "org.apache.pinot.plugin.stream.kafka20.KafkaConsumerFactory",
+        "stream.kafka.decoder.class.name": "org.apache.pinot.plugin.stream.kafka.KafkaJSONMessageDecoder",
+        "realtime.segment.flush.threshold.rows": "0",
+        "realtime.segment.flush.threshold.time": "24h",
+        "realtime.segment.flush.threshold.segment.size": "100M"
+      }
+    },
+    "metadata": {},
+    "ingestionConfig": {
+      "filterConfig": null,
+      "transformConfigs": null
+    },
+    "quota": {
+      "storage": null,
+      "maxQueriesPerSecond": null
+    },
+    "task": null,
+    "upsertConfig":{
+        "mode":"FULL"
+     },
+     "routing":{
+        "instanceSelectorType":"strictReplicaGroup"
+     },
+    "query": {
+      "timeoutMs": null
+    },
+    "fieldConfigList": null,
+    "tierConfigs": null
+  }
